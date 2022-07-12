@@ -15,11 +15,14 @@ String.prototype.render = function (obj) {
     return renderString;
 }
 
-let val = 'My name is ${name}, my age is ${age}';
+let val = 'My name is ${name}, my age is ${age}, ${my.occupation}';
 
 let obj = {
     name: "Rohit Singh",
-    age: 21
+    age: 21,
+    my : {
+        occupation : "Saftware Engineer"
+    }
 }
 
 console.log(val.render(obj));
